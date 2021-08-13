@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css"
+import styles from "./Footer.module.css"
 
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
+            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
