@@ -1,8 +1,8 @@
-import styles from './Main.module.css'
-import { Links } from '../components/Links'
-import { Headline } from '../components/Headline'
+import styles from 'src/components/Main/Main.module.css'
+import { Links } from 'src/components/Links'
+import { Headline } from 'src/components/Headline'
 
-export default function Main(props) {
+export function Main(props) {
   return (
       <main className={styles.main}>
         <Headline title={props.page}>
