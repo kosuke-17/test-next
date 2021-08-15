@@ -9,15 +9,16 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("")
   const [isShow, setIsShow] = useState(true)
+  const [array, setArray] = useState([])
 
   const handleClick = useCallback(() => {
     if (count < 10){
-    setCount((count) => count + 1);
+    setCount((prevcount) => prevcount + 1);
     }
   }, [count])
 
   const handleDisplay = useCallback(() =>{
-    setIsShow((isShow) => !isShow);
+    setIsShow((previsShow) => !previsShow);
   })
 
   const handleChange = useCallback((e) => {
@@ -25,8 +26,18 @@ export default function Home() {
       alert("5文字以内にしてください");
       return;
     }
-    setText(e.target.value);
+    setText(e.target.value.trim());
 }, []);
+
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some(item => item === text )) {
+        alert("おなじ要素が既に存在します");
+        return prevArray;
+      }
+      return [...prevArray, text];
+    });
+  }, [text])
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -48,6 +59,14 @@ export default function Home() {
           type="text"
           value={text}
           onChange={handleChange} />
+          <button onClick={handleAdd}>追加</button>
+        <ul>
+          {array.map((item) => {
+            return (
+              <li key={item} >{item}</li>
+            )
+          })}
+        </ul>
         <Main page="index"  />
         <Footer />
       </div>
