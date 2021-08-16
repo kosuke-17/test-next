@@ -3,14 +3,17 @@ import styles from '../styles/Home.module.css'
 import { Footer } from '../components/Footer'
 import { Main } from '../components/Main'
 import { Header } from '../components/Header'
-import { useCounter } from 'src/hooks/useCounter'
-import { useInputArray } from 'src/hooks/useInputArray'
-import { useBgLightBlue } from 'src/hooks/useBgLightBlue'
 
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+export default function About({
+    text,
+    array,
+    handleChange,
+    handleAdd,
+    count,
+    isShow,
+    handleClick,
+    handleDisplay
+  }) {
 
   return (
     <div className={styles.container}>
