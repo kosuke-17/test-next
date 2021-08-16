@@ -1,16 +1,16 @@
 import styles from "./Links.module.css"
 
-export function Links({ items }) {
+export const Link = (props) => {
   return (
-        <div className={styles.grid}>
-          {items.map((item) => {
-            return(
-              <a key={item.href} href={item.href} className={styles.card}>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-              </a>
-            )
-          })}
-        </div>
+      <div className={styles.grid}>
+        {props.items.map((item) => {
+          return(
+            <a key={item.href} href={item.href} className={styles.card}>
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </a>
+          )
+        })}
+      </div>
   )
 }
