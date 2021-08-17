@@ -1,6 +1,5 @@
 import styles from "./Footer.module.css"
 
-
 export const Footer = () => {
   return (
     <div>
@@ -12,6 +11,7 @@ export const Footer = () => {
         >
           Powered by{' '}
           <span className={styles.logo}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
