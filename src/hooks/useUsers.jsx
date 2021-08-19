@@ -6,7 +6,7 @@ export const useUsers = () => {
     "https://jsonplaceholder.typicode.com/users",
     fetcher
   )
-
+  console.log(data);
   return {
     data,
     error,
