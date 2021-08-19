@@ -1,13 +1,13 @@
-// import { Header } from 'src/components/Header'
-// import { User } from 'src/components/User'
+import { Header } from 'src/components/Header'
+import { Comment } from 'src/components/Comment'
 
-// const UsersId = () => {
-//   return (
-//       <div>
-//         <Header/>
-//         <User />
-//       </div>
-//   )
-// }
+const CommentsId = () => {
+  return (
+      <div>
+        <Header/>
+        <Comment />
+      </div>
+  )
+}
 
-// export default UsersId
+export default CommentsId

@@ -1,18 +1,18 @@
-// import { useRouter } from "next/dist/client/router";
-// import { fetcher } from "src/utils/fetcher";
-// import useSWR from "swr";
+import { useRouter } from "next/dist/client/router";
+import { fetcher } from "src/utils/fetcher";
+import useSWR from "swr";
 
-// export const useUser = () => {
-//   const router = useRouter();
-//   const {data: user, error: userError} = useSWR(
-//     router?.query.id
-//     ? `https://jsonplaceholder.typicode.com/users/${router.query.id}`
-//     : null,
-//     fetcher
-//   );
-//   return {
-//     user,
-//     error: userError,
-//     isLoading: !user && !userError,
-//   }
-// };
+export const useComment = () => {
+  const router = useRouter();
+  const {data: comment, error: commentError} = useSWR(
+    router?.query.id
+    ? `https://jsonplaceholder.typicode.com/comments/${router.query.id}`
+    : null,
+    fetcher
+  );
+  return {
+    comment,
+    error: commentError,
+    isLoading: !comment && !commentError,
+  }
+};
