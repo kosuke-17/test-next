@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import { Header } from 'src/components/Header'
-import { Posts as PostsComponents } from 'src/components/Posts'
+import { Users as UsersComponents } from 'src/components/Users'
 
 
-const Posts = () => {
+const Users = () => {
   return (
       <div>
         <Head>
-          <title>Posts Page</title>
+          <title>Users Page</title>
         </Head>
         <Header/>
-        <PostsComponents />
+        <UsersComponents />
       </div>
   )
 }
 
-export default Posts
+export default Users
